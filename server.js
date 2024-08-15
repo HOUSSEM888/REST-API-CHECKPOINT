@@ -12,7 +12,7 @@ mongoose.connect(process.env.DB_URI)
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
 
-app.use( '/user',require('./routes/user.routes'))
+app.use('/user',require('./Routes/User.routes'))
 
 app.listen(port,(err)=>{
     err?console.log('err', err):console.log(`Server is runnning on port :${port}`)
